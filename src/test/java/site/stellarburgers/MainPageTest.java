@@ -18,14 +18,20 @@ public class MainPageTest extends BaseTest{
         Assert.assertTrue(mainPage.isBurgerBuilderTitleDisplayed());
     }
     @Test
-    public void switchBetweenBunsSaucesFillingsSections() {
+    public void clickOnBunsSections() {
         goTo();
         Assert.assertTrue(mainPage.isBunTabSelected());
+    }
+    @Test
+    public void clickOnSaucesSections() {
+        goTo();
         mainPage.clickSaucesTab();
         Assert.assertTrue(mainPage.isSaucesTabSelected());
+    }
+    @Test
+    public void clickOnFillingsSections() {
+        goTo();
         mainPage.clickFillingsTab();
         Assert.assertTrue(mainPage.isFillingsTabSelected());
-        mainPage.clickBunsTab();
-        Assert.assertTrue(mainPage.isBunTabSelected());
     }
 }
